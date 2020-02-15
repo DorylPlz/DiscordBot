@@ -81,12 +81,12 @@ bot.on('message', message =>{
     }
     if (msg.includes("/clucho")){
         var x = Math.floor((Math.random() * 2) + 1);
-        switch (expresión) {
+        switch (x) {
             case 1:
                 message.channel.send("ermanito teni falopa? me funaron ermanito", {files: ["https://i.imgur.com/grGXM4O.jpg"]});
             break;
             case 2:
-                message.channel.send("ermanito teni falopa? me funaron ermanito", {files: ["https://i.imgur.com/JDSgGa1.jpg"]});
+                message.channel.send("", {files: ["https://i.imgur.com/JDSgGa1.jpg"]});
             break;
         }
         
