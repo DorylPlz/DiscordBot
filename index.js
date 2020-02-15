@@ -46,7 +46,7 @@ bot.on('message', message =>{
         message.channel.sendMessage('UwU');
     }
 
-    
+
     if (msg.includes("presion")){
         message.channel.sendMessage('Lo dijo');
     }
@@ -58,6 +58,26 @@ bot.on('message', message =>{
     }
     if (msg.includes("preción")){
         message.channel.sendMessage('Lo dijo (Mal escrito, pedazo de mierda)');
+    }
+
+    if (msg.includes("69")){
+        message.channel.sendMessage('Nice');
+    }
+    if (msg.includes("420")){
+        message.channel.send("lit", {files: ["https://i.imgur.com/KPNDAoN.png"]});
+    }
+
+    if (msg.includes("/comunista")){
+        message.channel.send("Comunista culiao", {files: ["https://i.imgur.com/TN5Zo3a.png"]});
+    }
+    if (msg.includes("/paty")){
+        message.channel.send("paty nazi paty nazi", {files: ["https://i.imgur.com/coiFuaH.png"]});
+    }
+    if (msg.includes("/darpel")){
+        message.channel.send("Culiao que tenia que mandar el meme menos meme de el, darpel culiao", {files: ["https://i.imgur.com/oMnWjeb.png"]});
+    }
+    if (msg.includes("mosh")){
+        message.channel.send("darilo mosh darilo mosh", {files: ["https://i.imgur.com/3iwQ72T.jpg"]});
     }
 })
 
