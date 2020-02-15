@@ -46,6 +46,13 @@ bot.on('message', message =>{
         message.channel.sendMessage('UwU');
     }
 
+    if (msg.includes("presion")){
+        message.channel.sendMessage('Lo dijo');
+    }
+
+    if (msg.includes("presión")){
+        message.channel.sendMessage('Lo dijo');
+    }
 })
 
 bot.login(token);
