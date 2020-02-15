@@ -79,6 +79,18 @@ bot.on('message', message =>{
     if (msg.includes("mosh")){
         message.channel.send("darilo mosh darilo mosh", {files: ["https://i.imgur.com/3iwQ72T.jpg"]});
     }
+    if (msg.includes("/clucho")){
+        var x = Math.floor((Math.random() * 2) + 1);
+        switch (expresión) {
+            case 1:
+                message.channel.send("ermanito teni falopa? me funaron ermanito", {files: ["https://i.imgur.com/grGXM4O.jpg"]});
+            break;
+            case 2:
+                message.channel.send("ermanito teni falopa? me funaron ermanito", {files: ["https://i.imgur.com/JDSgGa1.jpg"]});
+            break;
+        }
+        
+    }
 })
 
 bot.login(token);
