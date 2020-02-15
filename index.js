@@ -46,12 +46,18 @@ bot.on('message', message =>{
         message.channel.sendMessage('UwU');
     }
 
+    
     if (msg.includes("presion")){
         message.channel.sendMessage('Lo dijo');
     }
-
     if (msg.includes("presión")){
         message.channel.sendMessage('Lo dijo');
+    }
+    if (msg.includes("precion")){
+        message.channel.sendMessage('Lo dijo (Mal escrito, pedazo de mierda)');
+    }
+    if (msg.includes("preción")){
+        message.channel.sendMessage('Lo dijo (Mal escrito, pedazo de mierda)');
     }
 })
 
