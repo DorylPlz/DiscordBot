@@ -86,12 +86,12 @@ bot.on('message', message =>{
                 message.channel.send("Comunista culiao", {files: ["https://i.imgur.com/TN5Zo3a.png"]});
             break;
             case 2:
-                message.channel.send("", {files: ["https://i.imgur.com/JDSgGa1.jpg"]});
+                message.channel.send("", {files: ["https://i.imgur.com/6hJJZ3s.jpg"]});
             break;
         }
     }
     if (msg.includes("/paty")){
-        message.channel.send("paty nazi paty nazi", {files: ["https://i.imgur.com/6hJJZ3s.jpg"]});
+        message.channel.send("paty nazi paty nazi", {files: ["https://i.imgur.com/coiFuaH.png"]});
     }
     if (msg.includes("/darpel")){
         var x = Math.floor((Math.random() * 4) + 1);
