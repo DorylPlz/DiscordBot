@@ -37,16 +37,23 @@ bot.on('message', message =>{
 
         })
     }
-
+//Respuestas
     if (msg.includes("uwu")){
         message.channel.sendMessage('OwO');
     }
-
     if (msg.includes("owo")){
         message.channel.sendMessage('UwU');
     }
+    if (msg.includes("420")){
+        message.channel.send("lit", {files: ["https://i.imgur.com/KPNDAoN.png"]});
+    }
+    if (msg.includes("weon")){
+        message.channel.sendMessage('Aprende a insultar hueon');
+    }
 
 
+
+//Easter eggs
     if (msg.includes("presion")){
         message.channel.sendMessage('Lo dijo');
     }
@@ -59,25 +66,61 @@ bot.on('message', message =>{
     if (msg.includes("preción")){
         message.channel.sendMessage('Lo dijo (Mal escrito, pedazo de mierda)');
     }
-
     if (msg.includes("69")){
         message.channel.sendMessage('Nice');
     }
-    if (msg.includes("420")){
-        message.channel.send("lit", {files: ["https://i.imgur.com/KPNDAoN.png"]});
+    if (msg.includes("foto")){
+        message.channel.send("Que foto?", {files: ["https://pbs.twimg.com/media/DmcpEsPX4AEzs7X.jpg"]});
     }
 
+
+
+
+
+//Memes
     if (msg.includes("/comunista")){
-        message.channel.send("Comunista culiao", {files: ["https://i.imgur.com/TN5Zo3a.png"]});
+        
+        var x = Math.floor((Math.random() * 2) + 1);
+        switch (x) {
+            case 1:
+                message.channel.send("Comunista culiao", {files: ["https://i.imgur.com/TN5Zo3a.png"]});
+            break;
+            case 2:
+                message.channel.send("", {files: ["https://i.imgur.com/JDSgGa1.jpg"]});
+            break;
+        }
     }
     if (msg.includes("/paty")){
-        message.channel.send("paty nazi paty nazi", {files: ["https://i.imgur.com/coiFuaH.png"]});
+        message.channel.send("paty nazi paty nazi", {files: ["https://i.imgur.com/6hJJZ3s.jpg"]});
     }
     if (msg.includes("/darpel")){
-        message.channel.send("Culiao que tenia que mandar el meme menos meme de el, darpel culiao", {files: ["https://i.imgur.com/oMnWjeb.png"]});
+        var x = Math.floor((Math.random() * 4) + 1);
+        switch (x) {
+            case 1:
+                message.channel.send("Culiao que tenia que mandar el meme menos meme de el, darpel culiao", {files: ["https://i.imgur.com/oMnWjeb.png"]});
+            break;
+            case 2:
+                message.channel.send("", {files: ["https://i.imgur.com/6qg3C9G.jpg"]});
+            break;
+            case 3:
+                message.channel.send("Darpel nazi", {files: ["https://i.imgur.com/rBaj2Os.jpg"]});
+            break;
+            case 4:
+                message.channel.send("Darpel no homo", {files: ["https://i.imgur.com/D5k3cST.jpg"]});
+            break;
+        }
     }
-    if (msg.includes("mosh")){
-        message.channel.send("darilo mosh darilo mosh", {files: ["https://i.imgur.com/3iwQ72T.jpg"]});
+    if (msg.includes("/mosh")){
+        
+        var x = Math.floor((Math.random() * 2) + 1);
+        switch (x) {
+            case 1:
+                message.channel.send("darilo mosh darilo mosh", {files: ["https://i.imgur.com/3iwQ72T.jpg"]});
+            break;
+            case 2:
+                message.channel.send("", {files: ["https://i.imgur.com/7EaGfBp.jpg"]});
+            break;
+        }
     }
     if (msg.includes("/clucho")){
         var x = Math.floor((Math.random() * 2) + 1);
@@ -87,6 +130,18 @@ bot.on('message', message =>{
             break;
             case 2:
                 message.channel.send("", {files: ["https://i.imgur.com/JDSgGa1.jpg"]});
+            break;
+        }
+        
+    }
+    if (msg.includes("/hernan")){
+        var x = Math.floor((Math.random() * 2) + 1);
+        switch (x) {
+            case 1:
+                message.channel.send("Gotta go fast", {files: ["https://i.imgur.com/aTC5xzZ.jpg"]});
+            break;
+            case 2:
+                message.channel.send("", {files: ["https://i.imgur.com/Et3IFPI.jpg"]});
             break;
         }
         
