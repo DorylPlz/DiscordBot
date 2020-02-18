@@ -4,9 +4,9 @@ const ytdl = require('ytdl-core');
 const https = require("http");
 //var steamAPI = require('apis/steamapi.js');
 
-const token = process.env.TOKEN;
+const token = 'Njc0ODU3MzUwNzc5MzcxNTUx.XkhgMw.m3kpeI-QQQx5MQYf9S5lCMX6M3Y';//process.env.TOKEN;
 
-const steamKey = process.env.STEAM;
+const steamKey = 'F987C03CC424ECB0FD537F650B75A52B';//process.env.STEAM;
 
 const PREFIX = '';
 
@@ -197,6 +197,10 @@ bot.on('message', message =>{
                 var response = res['response'];
                 var games = response['games'];
                 console.log(games);
+                
+                
+
+                
             })
         }).end();
 
