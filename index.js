@@ -197,7 +197,7 @@ bot.on('message', message =>{
 
                 var string = JSON.stringify(body);
                 var nombres = JSON.parse(string);
-                console.log(nombres['name']);
+                console.log(nombres);
             })
         }).end();
 
