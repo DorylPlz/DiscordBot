@@ -45,7 +45,16 @@ bot.on('message', message =>{
         message.channel.sendMessage('UwU');
     }
     if (msg.includes("420")){
-        message.channel.send("lit", {files: ["https://i.imgur.com/KPNDAoN.png"]});
+        var x = Math.floor((Math.random() * 2) + 1);
+        switch (x) {
+            case 1:
+                message.channel.send("Lit", {files: ["https://i.imgur.com/KPNDAoN.png"]});
+            break;
+            case 2:
+                message.channel.send("Lit", {files: ["https://i.imgur.com/iLuAMzc.png"]});
+            break;
+        }
+        
     }
     if (msg.includes("weon")){
         message.channel.sendMessage('Aprende a insultar hueon');
