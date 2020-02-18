@@ -199,7 +199,7 @@ bot.on('message', message =>{
                 var data = JSON.parse(string);
 
                 
-                console.log(data.response.games['name']);
+                console.log(data.response.games.message['name']);
             })
         }).end();
 
