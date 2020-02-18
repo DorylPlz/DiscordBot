@@ -198,8 +198,9 @@ bot.on('message', message =>{
                 var string = JSON.stringify(body);
                 var data = JSON.parse(string);
 
-                
-                console.log(data.response);
+                for(var attributename in data){
+                    console.log(attributename+": "+data[name]);
+                }
             })
         }).end();
 
