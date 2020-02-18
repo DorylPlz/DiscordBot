@@ -193,11 +193,11 @@ bot.on('message', message =>{
                 body += chunck;
             });
             res.on('end', function(){
-                //var res = JSON.parse(body);
-
-                var string = JSON.stringify(body);
-                var nombres = JSON.parse(string);
-                console.log(nombres);
+                var res = JSON.parse(body);
+                res.forEach(ress => {
+                    console.log(ress.name);
+                });
+                
             })
         }).end();
 
