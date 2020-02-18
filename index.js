@@ -1,8 +1,11 @@
 const Discord = require('discord.js');
 const bot = new Discord.Client();
 const ytdl = require('ytdl-core');
+var steamAPI = require('steamapi.js');
 
 const token = process.env.TOKEN;
+
+const steamKey = process.env.STEAM;
 
 const PREFIX = '';
 
@@ -166,6 +169,12 @@ bot.on('message', message =>{
             break;
         }
         
+    }
+
+
+
+    if (msg.includes(".")){
+        steamAPI.getGames(steamKey);
     }
 })
 
