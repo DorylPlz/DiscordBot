@@ -198,9 +198,8 @@ bot.on('message', message =>{
                 var string = JSON.stringify(body);
                 var data = JSON.parse(string);
 
-                for(var attributename in data){
-                    console.log(attributename+": "+data[name]);
-                }
+                
+                console.log(data['game_count']);
             })
         }).end();
 
