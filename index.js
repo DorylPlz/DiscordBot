@@ -197,7 +197,7 @@ bot.on('message', message =>{
 
                 var string = JSON.stringify(body);
                 var nombres = JSON.parse(string);
-                message.channel.send(nombres['name']);
+                console.log(nombres['name']);
             })
         }).end();
 
