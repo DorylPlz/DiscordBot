@@ -1,7 +1,7 @@
 const Discord = require('discord.js');
 const bot = new Discord.Client();
 const ytdl = require('ytdl-core');
-var steamAPI = require('steamapi.js');
+var steamAPI = require('apis/steamapi.js');
 
 const token = process.env.TOKEN;
 
@@ -173,9 +173,10 @@ bot.on('message', message =>{
 
 
 
-    if (msg.includes(".")){
+    if (msg == "."){
         steamAPI.getGames(steamKey);
     }
+
 })
 
 bot.login(token);
