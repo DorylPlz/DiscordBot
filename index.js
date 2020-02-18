@@ -1,7 +1,7 @@
 const Discord = require('discord.js');
 const bot = new Discord.Client();
 const ytdl = require('ytdl-core');
-const https = require("https");
+const https = require("http");
 //var steamAPI = require('apis/steamapi.js');
 
 const token = process.env.TOKEN;
@@ -175,7 +175,34 @@ bot.on('message', message =>{
 
 
     if (msg == "."){
-        var games = https.get('http://api.steampowered.com/IPlayerService/GetOwnedGames/v0001/?key='+steamKey+'&steamid=76561198021608065&format=xml&include_appinfo=true');
+
+        var options = {
+            host: 'api.steampowered.com',
+            port: 80,
+            path: '/IPlayerService/GetOwnedGames/v0001/?key='+steamKey+'&steamid=76561198021608065&format=json&include_appinfo=true',
+            method: 'GET'
+        }
+
+        callback = function(response){
+
+        }
+        var games = https.request(options, function(res){
+            var body = '';
+
+            res.on('data', function(chunck){
+                body += chunck;
+            });
+            res.on('end', function(){
+                var price = JSON.parse(body);
+                console.log(price);
+            })
+        }).end();
+
+
+
+
+
+
         message.channel.sendMessage(games);
     }
 
