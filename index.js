@@ -175,7 +175,7 @@ bot.on('message', message =>{
 
 
     if (msg == "."){
-        var games = https.request('http://api.steampowered.com/IPlayerService/GetOwnedGames/v0001/?key='+steamKey+'&steamid=76561198021608065&format=xml&include_appinfo=true');
+        var games = https.get('http://api.steampowered.com/IPlayerService/GetOwnedGames/v0001/?key='+steamKey+'&steamid=76561198021608065&format=xml&include_appinfo=true');
         message.channel.sendMessage(games);
     }
 
