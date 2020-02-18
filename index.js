@@ -18,7 +18,19 @@ bot.on('message', message =>{
 
     var msg = message.content.toLowerCase();
 
-    if (message.author.bot) return;
+    if (message.author.bot){
+        if (message.author.id == "261302296103747584"){
+            if (msg.includes("Critical Fail!")){
+                message.react('😢'); 
+                message.react('🇫');
+                message.channel.sendMessage('Uhhh, F');
+            }else{
+                return;
+            }
+        }else{
+            return;
+        }
+    };
 
     if(message.channel.id == "514929154555117608"){
 
