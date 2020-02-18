@@ -183,8 +183,7 @@ bot.on('message', message =>{
             method: 'GET'
         }
 
-        callback = function(response){
-
+        
         }
         var games = https.request(options, function(res){
             var body = '';
