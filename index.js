@@ -206,7 +206,7 @@ bot.on('message', message =>{
 
 
 
-        message.channel.sendMessage(games);
+        //message.channel.sendMessage(games);
     }
 
 })
