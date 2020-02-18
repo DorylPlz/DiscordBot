@@ -193,8 +193,8 @@ bot.on('message', message =>{
                 body += chunck;
             });
             res.on('end', function(){
-                var price = JSON.parse(body);
-                console.log(price);
+                var res = JSON.parse(body);
+                message.channel.sendMessage(res);
             })
         }).end();
 
