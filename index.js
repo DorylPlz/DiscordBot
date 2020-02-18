@@ -193,11 +193,13 @@ bot.on('message', message =>{
                 body += chunck;
             });
             res.on('end', function(){
-                var res = JSON.parse(body);
-                res.forEach(ress => {
-                    console.log(ress.name);
-                });
+                //var res = JSON.parse(body);
+
+                var string = JSON.stringify(body);
+                var data = JSON.parse(string);
+
                 
+                console.log(data.response.games['name']);
             })
         }).end();
 
