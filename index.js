@@ -193,8 +193,11 @@ bot.on('message', message =>{
                 body += chunck;
             });
             res.on('end', function(){
-                var res = JSON.parse(body);
-                message.channel.sendMessage(res);
+                //var res = JSON.parse(body);
+
+                var string = JSON.stringify(body);
+                var nombres = JSON.parse(string);
+                message.channel.send(nombres);
             })
         }).end();
 
