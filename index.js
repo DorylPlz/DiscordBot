@@ -172,45 +172,48 @@ bot.on('message', message =>{
         
     }
 
+    if(message.channel.id == "675043690921852928"){
+        if (msg == "."){
 
-
-    if (msg == "."){
-
-        var options = {
-            host: 'api.steampowered.com',
-            port: 80,
-            path: '/IPlayerService/GetOwnedGames/v0001/?key='+steamKey+'&steamid=76561198021608065&format=json&include_appinfo=true',
-            method: 'GET'
+            var options = {
+                host: 'api.steampowered.com',
+                port: 80,
+                path: '/IPlayerService/GetOwnedGames/v0001/?key='+steamKey+'&steamid=76561198021608065&format=json&include_appinfo=true',
+                method: 'GET'
+            }
+    
+            callback = function(response){
+    
+            }
+            var games = https.request(options, function(res){
+                var body = '';
+    
+                res.on('data', function(chunck){
+                    body += chunck;
+                });
+                res.on('end', function(){
+                    var res = JSON.parse(body);
+                    var response = res['response'];
+                    var games = response['games'];
+                    console.log(games);
+                    
+                    
+    
+                    
+                })
+            }).end();
+    
+    
+    
+    
+    
+    
+            //message.channel.sendMessage(games);
         }
-
-        callback = function(response){
-
-        }
-        var games = https.request(options, function(res){
-            var body = '';
-
-            res.on('data', function(chunck){
-                body += chunck;
-            });
-            res.on('end', function(){
-                var res = JSON.parse(body);
-                var response = res['response'];
-                var games = response['games'];
-                console.log(games);
-                
-                
-
-                
-            })
-        }).end();
-
-
-
-
-
-
-        //message.channel.sendMessage(games);
+    
     }
+    
+    
 
 })
 
