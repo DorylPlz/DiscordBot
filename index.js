@@ -57,6 +57,7 @@ bot.on('message', message =>{
 //Respuestas
     if (msg.includes("uwu")){
         message.channel.sendMessage('OwO');
+        message.channel.sendEmbed('adsfgrthdhjydrtj6ydsjhydrtydh6rdhyt6yhdr5tygred6htdrsyh65dju5dej5dehy6de');
     }
     if (msg.includes("owo")){
         message.channel.sendMessage('UwU');
@@ -175,49 +176,47 @@ bot.on('message', message =>{
 
     if(message.channel.id == "675043690921852928"){
         if (msg == "."){
+            var darylid = '76561198021608065';
 
-            var options = {
-                host: 'api.steampowered.com',
-                port: 80,
-                path: '/IPlayerService/GetOwnedGames/v0001/?key='+steamKey+'&steamid=76561198021608065&format=json&include_appinfo=true',
-                method: 'GET'
+            var lista1 = optionsteam(darylid);
+            console.log(lista1);
+
+            function optionsteam(id){
+                var lista = [];
+                var options = {
+                    host: 'api.steampowered.com',
+                    port: 80,
+                    path: '/IPlayerService/GetOwnedGames/v0001/?key='+steamKey+'&steamid='+id+'&format=json&include_appinfo=true',
+                    method: 'GET'
+                }
+                
+                var games = https.request(options, function(res){
+                    var body = '';
+        
+                    res.on('data', function(chunck){
+                        body += chunck;
+                    });
+                    res.on('end', function(){
+                        var res = JSON.parse(body);
+                        if(res){
+                            var response = res['response'];
+                            let game = response['games'];
+                            //let msj = game['message'];
+                            
+                            for(let i=0, len=game.length; i<len; i++){
+                                lista.push(game[i]['name']);
+                                //console.log(game[i]['name']);
+                            }
+                            return lista;
+                        }else{
+                            return null;
+                        }
+                        
+                    })
+                }).end();
             }
-    
-            callback = function(response){
-    
-            }
-            var games = https.request(options, function(res){
-                var body = '';
-    
-                res.on('data', function(chunck){
-                    body += chunck;
-                });
-                res.on('end', function(){
-                    var res = JSON.parse(body);
-                    var response = res['response'];
-                    let game = response['games'];
-                    console.log(game);
-                    //for(let i=0, len=game.lenght; i<len; i++){
-                    //    console.log(chars[i]['name']);
-                    //}
-
-
-
-                })
-            }).end();
-    
-    
-    
-    
-    
-    
-            //message.channel.sendMessage(games);
         }
-    
     }
-    
-    
-
 })
 
 bot.login(token);
