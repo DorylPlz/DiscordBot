@@ -2,6 +2,7 @@ const Discord = require('discord.js');
 const bot = new Discord.Client();
 const ytdl = require('ytdl-core');
 const https = require("http");
+
 //var steamAPI = require('apis/steamapi.js');
 
 const token = process.env.TOKEN;
@@ -194,12 +195,14 @@ bot.on('message', message =>{
                 res.on('end', function(){
                     var res = JSON.parse(body);
                     var response = res['response'];
-                    var games = response['games'];
-                    console.log(games);
-                    
-                    
-    
-                    
+                    let game = response['games'];
+                    console.log(game);
+                    //for(let i=0, len=game.lenght; i<len; i++){
+                    //    console.log(chars[i]['name']);
+                    //}
+
+
+
                 })
             }).end();
     
