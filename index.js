@@ -5,9 +5,9 @@ const https = require("http");
 
 //var steamAPI = require('apis/steamapi.js');
 
-const token = process.env.TOKEN;
+const token = 'Njc0ODU3MzUwNzc5MzcxNTUx.XkymDw.0GjsUVS7FenZF12iofMRZmKhGiE';//process.env.TOKEN;
 
-const steamKey = process.env.STEAM;
+const steamKey = '860F884FE4DBDE2BA4492B034E97B53E';//process.env.STEAM;
 
 const PREFIX = '';
 
@@ -39,20 +39,23 @@ bot.on('message', message =>{
 
     if(message.channel.id == "514929154555117608"){
 
-        if(!message.member.voiceChannel){
-            return;
-        }
+        //if(!message.member.voiceChannel){
+        //    return;
+        //}
+        message.react('😩'); 
+        message.react('👌');
+        message.react('💯');
+        message.channel.sendMessage('Alerta de meme *Sonido de nuke de cod*');
+        //if(!message.guild.voiceConnection) message.member.voiceChannel.join().then(function(connection){
+        //    var url = 'https://www.youtube.com/watch?v=u9o0DkInNls';
+        //    connection.playStream(ytdl(url, {filter: "audioonly"}));
 
-        if(!message.guild.voiceConnection) message.member.voiceChannel.join().then(function(connection){
-            var url = 'https://www.youtube.com/watch?v=u9o0DkInNls';
-            connection.playStream(ytdl(url, {filter: "audioonly"}));
+        //    setTimeout(timeout, 18000);
+        //    function timeout(){
+        //        connection.disconnect()
+        //    }
 
-            setTimeout(timeout, 18000);
-            function timeout(){
-                connection.disconnect()
-            }
-
-        })
+        //})
     }
 //Respuestas
     if (msg.includes("uwu")){
@@ -177,8 +180,8 @@ bot.on('message', message =>{
     if(message.channel.id == "675043690921852928"){
         if (msg == "."){
             var darylid = '76561198021608065';
-
-            var lista1 = optionsteam(darylid);
+            var burgosid = '76561198052245687';
+            var lista1 = optionsteam(burgosid);
             console.log(lista1);
 
             function optionsteam(id){
@@ -198,22 +201,18 @@ bot.on('message', message =>{
                     });
                     res.on('end', function(){
                         var res = JSON.parse(body);
-                        if(res){
+
                             var response = res['response'];
                             let game = response['games'];
                             //let msj = game['message'];
                             
                             for(let i=0, len=game.length; i<len; i++){
                                 lista.push(game[i]['name']);
-                                //console.log(game[i]['name']);
                             }
-                            return lista;
-                        }else{
-                            return null;
-                        }
-                        
+                            callback(lista);
                     })
                 }).end();
+                return lista;
             }
         }
     }
