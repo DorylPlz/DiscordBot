@@ -5,9 +5,9 @@ const https = require("http");
 
 //var steamAPI = require('apis/steamapi.js');
 
-const token = 'Njc0ODU3MzUwNzc5MzcxNTUx.XlXU6Q.Ny6RJjjIZIQK5Tl1t0U_0kLXVdg';//process.env.TOKEN;
+const token = process.env.TOKEN;
 
-const steamKey = '2E26C4EBC1EDAE3926F700C1564A97E9';//process.env.STEAM;
+const steamKey = process.env.STEAM;
 
 const PREFIX = '';
 
