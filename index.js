@@ -124,35 +124,34 @@ bot.on('message', message =>{
             var ano = split_fecha[2];
             alarma_date.setFullYear(ano,mes,dia);
             alarma_date.setHours(split_hours[0]-3,split_hours[1]);
-            console.log(current_date);
-            //if(current_date < alarma_date){
-            //    var mils_current = current_date.getTime();
-            //    var mils_alarma = alarma_date.getTime();
-            //    var mils_between = mils_alarma - mils_current;
-            //    setTimeout(alarma, mils_between);
-            //    function alarma(){
-            //        if(!message.guild.voiceConnection) message.member.voiceChannel.join().then(function(connection){
-            //            message.channel.send('DESPIERTA CTM, HABIAS PROGRAMADO '+args[3]+ message.Author.Mention);
-            //            var url = 'https://www.youtube.com/watch?v=nVCUKH1vN1g';
-            //            connection.playStream(ytdl(url, {filter: "audioonly"}));
+            if(current_date < alarma_date){
+                var mils_current = current_date.getTime();
+                var mils_alarma = alarma_date.getTime();
+                var mils_between = mils_alarma - mils_current;
+                setTimeout(alarma, mils_between);
+                function alarma(){
+                    if(!message.guild.voiceConnection) message.member.voiceChannel.join().then(function(connection){
+                        message.channel.send('DESPIERTA CTM, HABIAS PROGRAMADO '+args[3]+ message.Author.Mention);
+                        var url = 'https://www.youtube.com/watch?v=nVCUKH1vN1g';
+                        connection.playStream(ytdl(url, {filter: "audioonly"}));
             
-            //            setTimeout(timeout, 18000);
-            //            function timeout(){
-            //                connection.disconnect()
-            //            }
+                        setTimeout(timeout, 18000);
+                        function timeout(){
+                            connection.disconnect()
+                        }
             
-             //       })
-            //    }
+                   })
+                }
 
-            //    message.channel.send('Alarma '+args[3]+' programada');
-            //}else{
-            //    message.react('😡');
-            //    message.channel.send("Acaso quieres viajar al pasado? Crees que esta wea es steins;gate? >:C");
-            //}
+                message.channel.send('Alarma '+args[3]+' programada');
+            }else{
+                message.react('😡');
+                message.channel.send("Acaso quieres viajar al pasado? Crees que esta wea es steins;gate? >:C");
+            }
             
 
         }else{
-            message.channel.send("Faltaron condiciones, el formato es /alarma <dia/mes/año> <hora:minutos> <nombre de la alarma> en formato de 24 horas");
+            message.channel.send("Faltaron condiciones, el formato es /alarma <dia/mes/año> <hora:minutos> <nombre de la alarma, solo 1 palabra> en formato de 24 horas");
         }
 
 
