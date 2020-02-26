@@ -17,6 +17,9 @@ bot.on('ready', () =>{
     console.log('Bot online');
 })
 
+
+
+
 bot.on('message', message =>{
     
     let args = message.content.substring(PREFIX.lenght).split("");
@@ -104,7 +107,14 @@ bot.on('message', message =>{
         message.channel.send("Que foto?", {files: ["https://pbs.twimg.com/media/DmcpEsPX4AEzs7X.jpg"]});
     }
 
+//alarma
+if (msg.includes("/alarma")){
+    var date = new Date();
+    var current_hour = date.getHours();
+    message.channel.sendMessage(current_hour);
 
+
+}
 
 
 
