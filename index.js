@@ -45,6 +45,7 @@ bot.on('message', message =>{
         message.react('😩'); 
         message.react('👌');
         message.react('💯');
+        message.react('🔥');
         message.channel.sendMessage('Alerta de meme *Sonido de nuke de cod*');
         //if(!message.guild.voiceConnection) message.member.voiceChannel.join().then(function(connection){
         //    var url = 'https://www.youtube.com/watch?v=u9o0DkInNls';
