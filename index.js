@@ -5,9 +5,9 @@ const https = require("http");
 
 //var steamAPI = require('apis/steamapi.js');
 
-const token = process.env.TOKEN;
+const token = 'Njc0ODU3MzUwNzc5MzcxNTUx.XlXU6Q.Ny6RJjjIZIQK5Tl1t0U_0kLXVdg';//process.env.TOKEN;
 
-const steamKey = process.env.STEAM;
+const steamKey = '2E26C4EBC1EDAE3926F700C1564A97E9';//process.env.STEAM;
 
 const PREFIX = '';
 
@@ -16,9 +16,6 @@ var servers = {};
 bot.on('ready', () =>{
     console.log('Bot online');
 })
-
-
-
 
 bot.on('message', message =>{
     
@@ -108,16 +105,58 @@ bot.on('message', message =>{
     }
 
 //alarma
-if (msg.includes("/alarma")){
-    var date = new Date();
-    var current_hour = date.getHours();
-    message.channel.sendMessage(current_hour);
+    if (msg.includes("/alarma")){
+        const args = message.content.split(/ +/g);
+
+        if(args[1] && args[2] != null){
+            var current_date = new Date();
+            var alarma_date = new Date();
+            
+            current_date.setHours(current_date.getHours()-3, current_date.getMinutes());
+
+            var fecha_alarma = args[1];
+            var hora_alarma = args[2];
+    
+            var split_fecha = fecha_alarma.split('/');
+            var split_hours = hora_alarma.split(':');
+            var dia = split_fecha[0];
+            var mes = split_fecha[1]-1;
+            var ano = split_fecha[2];
+            alarma_date.setFullYear(ano,mes,dia);
+            alarma_date.setHours(split_hours[0]-3,split_hours[1]);
+    
+            if(current_date < alarma_date){
+                var mils_current = current_date.getTime();
+                var mils_alarma = alarma_date.getTime();
+                var mils_between = mils_alarma - mils_current;
+                setTimeout(alarma, mils_between);
+                function alarma(){
+                    if(!message.guild.voiceConnection) message.member.voiceChannel.join().then(function(connection){
+                        message.channel.send('DESPIERTA CTM, HABIAS PROGRAMADO '+args[3]+ message.Author.Mention);
+                        var url = 'https://www.youtube.com/watch?v=nVCUKH1vN1g';
+                        connection.playStream(ytdl(url, {filter: "audioonly"}));
+            
+                        setTimeout(timeout, 18000);
+                        function timeout(){
+                            connection.disconnect()
+                        }
+            
+                    })
+                }
+
+                message.channel.send('Alarma '+args[3]+' programada');
+            }else{
+                message.react('😡');
+                message.channel.send("Acaso quieres viajar al pasado? Crees que esta wea es steins;gate? >:C");
+            }
+            //console.log(alarma_date);
+
+        }else{
+            message.channel.send("Faltaron condiciones, el formato es /alarma <dia/mes/año> <hora:minutos> <nombre de la alarma> en formato de 24 horas");
+        }
 
 
-}
-
-
-
+    }
 //Memes
     if (msg.includes("/comunista")){
         
