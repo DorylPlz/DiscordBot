@@ -61,7 +61,6 @@ bot.on('message', message =>{
 //Respuestas
     if (msg.includes("uwu")){
         message.channel.sendMessage('OwO');
-        message.channel.sendEmbed('adsfgrthdhjydrtj6ydsjhydrtydh6rdhyt6yhdr5tygred6htdrsyh65dju5dej5dehy6de');
     }
     if (msg.includes("owo")){
         message.channel.sendMessage('UwU');
