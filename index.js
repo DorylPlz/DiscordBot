@@ -143,7 +143,7 @@ bot.on('message', message =>{
                    })
                 }
 
-                message.channel.send('Alarma '+args[3]+' programada');
+                message.channel.send('Alarma '+args[3]+' programada por @'+message.author.id);
             }else{
                 message.react('😡');
                 message.channel.send("Acaso quieres viajar al pasado? Crees que esta wea es steins;gate? >:C");
