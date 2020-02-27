@@ -111,7 +111,7 @@ bot.on('message', message =>{
             var current_date = new Date();
             var alarma_date = new Date();
             
-            current_date.setHours(current_date.getHours()-3, current_date.getMinutes());
+            current_date.setHours(current_date.getHours(), current_date.getMinutes());
 
             var fecha_alarma = args[1];
             var hora_alarma = args[2];
