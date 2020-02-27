@@ -143,7 +143,7 @@ bot.on('message', message =>{
                    })
                 }
 
-                message.reply(' ha programado la alarma: '+args[3]);
+                message.reply(' has programado la alarma: '+args[3]);
             }else{
                 message.react('😡');
                 message.channel.send("Acaso quieres viajar al pasado? Crees que esta wea es steins;gate? >:C");
