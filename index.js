@@ -147,6 +147,7 @@ bot.on('message', message =>{
             }else{
                 message.react('😡');
                 message.channel.send("Acaso quieres viajar al pasado? Crees que esta wea es steins;gate? >:C");
+                console.log('Hora actual: '+current_date+ 'hora programada: '+alarma_date);
             }
             
 
