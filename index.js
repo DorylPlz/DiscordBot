@@ -150,7 +150,7 @@ bot.on('message', message =>{
                 console.log('Hora actual: '+current_date+ 'hora programada: '+alarma_date);
             }
             
-
+            console.log('Hora actual: '+current_date+ 'hora programada: '+alarma_date);
         }else{
             message.channel.send("Faltaron condiciones, el formato es /alarma <dia/mes/año> <hora:minutos> <nombre de la alarma, solo 1 palabra> en formato de 24 horas");
         }
