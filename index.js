@@ -129,7 +129,7 @@ bot.on('message', message =>{
                 var mils_between = mils_alarma - mils_current;
                 setTimeout(alarma, mils_between);
                 function alarma(){
-                    message.channel.send('DESPIERTA CTM, HABIAS PROGRAMADO '+args[3]+ message.Author.Mention());
+                    message.channel.send('DESPIERTA CTM, HABIAS PROGRAMADO '+args[3]);
                     if(!message.guild.voiceConnection) message.member.voiceChannel.join().then(function(connection){
                         
                         var url = 'https://www.youtube.com/watch?v=nVCUKH1vN1g';
