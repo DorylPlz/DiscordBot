@@ -29,7 +29,7 @@ function checkAlarmas(){
                 console.log("si hay alarmas activas");
             }
         }
-        connection.end();
+        db.end();
     })
 
 
@@ -70,7 +70,7 @@ module.exports = {
                 let query = db.query(savealarma, (err, results) => {
                     if(err) throw err;
                     console.log("Registrada en la base de datos");
-                    connection.end();
+                    db.end();
                 })
 
                 setTimeout(alarma, mils_between);
@@ -82,7 +82,7 @@ module.exports = {
                     let query2 = db.query(estado, (err, results) => {
                         if(err) throw err;
                         console.log("Alarma apagada");
-                        connection.end();
+                        db.end();
                     })
 
                     if(!message.guild.voiceConnection) message.member.voiceChannel.join().then(function(connection){
