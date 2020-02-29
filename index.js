@@ -23,7 +23,7 @@ bot.on('ready', () =>{
 
 bot.on('message', message =>{
     
-    let args = message.content.substring(PREFIX.lenght).split("");
+    let args = message.content.substring(PREFIX.length).split("");
 
     var msg = message.content.toLowerCase();
 
