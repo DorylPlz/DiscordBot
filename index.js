@@ -10,10 +10,10 @@ const reacts = require("./funciones/reacts.js");
 const steam = require("./funciones/steamapi.js");
 const test = require("./funciones/test.js");
 
-const configApp = config.app;
-const token = configApp.token;//process.env.TOKEN;
-const steamKey = configApp.steam;//process.env.STEAM;
-const PREFIX = configApp.prefix;
+//const configApp = config.app;
+const token = process.env.TOKEN;//configApp.token;//
+const steamKey = process.env.STEAM;//configApp.steam;//
+const PREFIX = process.env.PREFIX//configApp.prefix;
 
 
 bot.on('ready', () =>{

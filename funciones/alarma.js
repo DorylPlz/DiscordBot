@@ -4,10 +4,10 @@ const mysql = require("mysql");
 
 const db = 
     mysql.createConnection({
-        host: config.db.host,
-        user: config.db.user,
-        password: config.db.password,
-        database: config.db.database
+        host: process.env.host,//config.db.host, 
+        user: process.env.user,//config.db.user,
+        password: process.env.password,//config.db.password,
+        database: process.env.database//config.db.database
     });
 
 var alarma = {
