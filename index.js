@@ -8,11 +8,9 @@ const frases = require("./funciones/frases.js");
 const memes = require("./funciones/memes.js");
 const reacts = require("./funciones/reacts.js");
 const steam = require("./funciones/steamapi.js");
+const test = require("./funciones/test.js");
 
-const db = config.db;
 const configApp = config.app;
-
-
 const token = configApp.token;//process.env.TOKEN;
 const steamKey = configApp.steam;//process.env.STEAM;
 const PREFIX = configApp.prefix;
@@ -20,6 +18,7 @@ const PREFIX = configApp.prefix;
 
 bot.on('ready', () =>{
     console.log('Bot online');
+    al_func.checkAlarmas();
 })
 
 bot.on('message', message =>{
@@ -27,6 +26,7 @@ bot.on('message', message =>{
     let args = message.content.substring(PREFIX.lenght).split("");
 
     var msg = message.content.toLowerCase();
+
 //reacts
     if (message.author.bot){
         if (message.author.id == "261302296103747584"){

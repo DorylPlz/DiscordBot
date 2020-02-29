@@ -1,6 +1,3 @@
-const Discord = require('discord.js');
-const bot = new Discord.Client();
-
 module.exports = {
     roll1: function(){
         message.react('😢'); 
