@@ -25,7 +25,9 @@ function checkAlarmas(){
     let query = db.query(alarmas, (err, results) => {
         if(err) throw err;
         for(let i=0, len=results.length; i<len; i++){
-            
+            if(result[i].estado == 1){
+                console.log("si hay alarmas activas");
+            }
         }
     })
 
