@@ -2,6 +2,7 @@ const Discord = require('discord.js');
 const bot = new Discord.Client();
 const ytdl = require('ytdl-core');
 const https = require("http");
+const config = require("config.json");
 
 //var steamAPI = require('apis/steamapi.js');
 

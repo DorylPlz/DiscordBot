@@ -1,0 +1,12 @@
+{
+    "App": {
+        "token": "",
+        "steam": ""
+    },
+    "db": {
+        "host": "",
+        "user": "",
+        "password": "",
+        "database": ""
+    }
+}
