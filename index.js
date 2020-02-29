@@ -2,15 +2,15 @@ const Discord = require('discord.js');
 const bot = new Discord.Client();
 const ytdl = require('ytdl-core');
 const https = require("http");
-const config = require("config.json");
+const config = require("./config.json");
 
-//var steamAPI = require('apis/steamapi.js');
+const db = config.db;
+const configApp = config.App;
 
-const token = process.env.TOKEN;
 
-const steamKey = process.env.STEAM;
-
-const PREFIX = '';
+const token = configApp.token;//process.env.TOKEN;
+const steamKey = configApp.steam;//process.env.STEAM;
+const PREFIX = configApp.prefix;
 
 var servers = {};
 
