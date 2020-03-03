@@ -24,12 +24,15 @@ function checkAlarmas(){
 
     let query = db.query(alarmas, (err, results) => {
         if(err) throw err;
-        for(let i=0, len=results.length; i<len; i++){
-            if(result[i].estado == 1){
-                console.log("si hay alarmas activas");
+        if(results.length >= 1){
+            console.log("Si hay alarmas activas");
+            for(let i=0, len=results.length; i<len; i++){
+                
             }
+        }else{
+            console.log("No hay alarmas activas");
         }
-        db.end();
+
     })
 
 
@@ -70,7 +73,6 @@ module.exports = {
                 let query = db.query(savealarma, (err, results) => {
                     if(err) throw err;
                     console.log("Registrada en la base de datos");
-                    db.end();
                 })
 
                 setTimeout(alarma, mils_between);
