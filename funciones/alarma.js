@@ -87,18 +87,23 @@ module.exports = {
                         db.end();
                     })
 
-                    if(!message.guild.voiceConnection) message.member.voiceChannel.join().then(function(connection){
+                    if(!message.guild.voiceConnection){
+                        message.member.voiceChannel.join().then(function(connection){
                         
-                        var url = 'https://www.youtube.com/watch?v=nVCUKH1vN1g';
-                        connection.playStream(ytdl(url, {filter: "audioonly"}));
-            
-                        setTimeout(timeout, 18000);
-                        function timeout(){
-                            connection.disconnect()
+                            var url = 'https://www.youtube.com/watch?v=nVCUKH1vN1g';
+                            connection.playStream(ytdl(url, {filter: "audioonly"}));
+                
+                            setTimeout(timeout, 18000);
+                            function timeout(){
+                                connection.disconnect()
+    
+                            }
+                
+                       })
 
-                        }
-            
-                   })
+                    }else{
+                        console.log("No está conectado el usuario");
+                    }
                 }
     
                 message.reply(' has programado la alarma: '+args[3]);
