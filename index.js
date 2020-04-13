@@ -13,9 +13,9 @@ const test = require("./funciones/test.js");
 
 const configApp = config.app;
 
-const token = configApp.token;
-const steamKey = configApp.steam;
-const PREFIX = configApp.prefix;
+const token = process.env.TOKEN;//configApp.token;//
+const steamKey = process.env.STEAM;//configApp.steam;//
+const PREFIX = process.env.PREFIX//configApp.prefix;
 
 
 bot.on('ready', () =>{
