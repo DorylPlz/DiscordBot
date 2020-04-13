@@ -10,8 +10,8 @@ module.exports = {
         
         for(let i=0, len=args.length; i<len; i++){
             var strings = args[i].split(':');
-            var cuenta = strings[0]+':'+strings[2]+':'+strings[1];
-            lista.push(cuenta);
+            //var cuenta = strings[0]+':'+strings[2]+':'+strings[1];
+            lista.push(strings);
 
         }
         message.channel.send(lista);
