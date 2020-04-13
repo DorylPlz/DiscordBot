@@ -20,7 +20,7 @@ module.exports = {
             lista.push(args[i]);
 
         }
-        console.log(lista);
+        message.channel.send(lista);
     }
     
 };
