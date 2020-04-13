@@ -4,7 +4,8 @@ const https = require('https');
 
 
 module.exports = {
-    unmigrated: function(message, msg){
+    unmigrated: function(message){
+      var msg = message.content;
         var args = msg.split(',');
         var lista = [];
         
@@ -14,6 +15,7 @@ module.exports = {
             lista.push(cuenta);
 
         }
+        console.log(lista);
         message.channel.send(msg);
     },
     checker: function(message, msg){
