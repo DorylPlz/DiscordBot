@@ -10,11 +10,11 @@ module.exports = {
         
         for(let i=0, len=args.length; i<len; i++){
             var strings = args[i].split(':');
-            //var cuenta = strings[0]+':'+strings[2]+':'+strings[1];
-            lista.push(strings);
+            var cuenta = strings[0]+':'+strings[2]+':'+strings[1];
+            lista.push(cuenta);
 
         }
-        message.channel.send(lista);
+        message.channel.send(msg);
     },
     checker: function(message, msg){
         var args = msg.split(',');
