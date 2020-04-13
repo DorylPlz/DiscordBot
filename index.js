@@ -68,6 +68,10 @@ bot.on('message', message =>{
         
         texto.unmigrated(message, msg);
     }
+    if(message.channel.id == "699124689074782269"){
+        
+        texto.checker(message, msg);
+    }
 })
 
 bot.login(token);
