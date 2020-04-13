@@ -17,7 +17,9 @@ module.exports = {
         var lista = [];
         
         for(let i=0, len=args.length; i<len; i++){
-            lista.push(args[i]);
+            var strings = args[i].split(':');
+            var cuenta = strings[0]+':'+strings[2]+':'+string[1];
+            lista.push(cuenta);
 
         }
         message.channel.send(lista);
