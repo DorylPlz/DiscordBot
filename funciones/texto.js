@@ -4,19 +4,17 @@ const https = require('https');
 
 
 module.exports = {
-    unmigrated: function(message){
-      var msg = message.content;
+    unmigrated: function(message, msg){
         var args = msg.split(',');
         var lista = [];
-        
+        var msg = message.content;
         for(let i=0, len=args.length; i<len; i++){
             var strings = args[i].split(':');
             var cuenta = strings[0]+':'+strings[2]+':'+strings[1];
             lista.push(cuenta);
 
         }
-        console.log(lista);
-        message.channel.send(msg);
+        message.channel.send(lista);
     },
     checker: function(message, msg){
         var args = msg.split(',');
