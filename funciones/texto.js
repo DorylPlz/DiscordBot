@@ -1,4 +1,4 @@
-
+const Discord = require('discord.js');
 const config = require("../config.json");
 
 function unmigrated(message, msg){
@@ -15,10 +15,12 @@ module.exports = {
     unmigrated: function(message, msg){
         var args = msg.split(',');
         var lista;
-        for(let i=0, len=args.length; i<len; i++){
-            message.channel.send(args[i]);
-        }
         
+        for(let i=0, len=args.length; i<len; i++){
+            lista.push(args[i]);
+
+        }
+        console.log(lista);
     }
     
 };
