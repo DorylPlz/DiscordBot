@@ -14,7 +14,7 @@ function unmigrated(message, msg){
 module.exports = {
     unmigrated: function(message, msg){
         var args = msg.split(',');
-        var lista;
+        var lista = [];
         
         for(let i=0, len=args.length; i<len; i++){
             lista.push(args[i]);
