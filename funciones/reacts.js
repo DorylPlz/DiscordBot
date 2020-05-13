@@ -27,7 +27,7 @@ module.exports = {
     },
     reacts: function(msg, message){
         switch (msg){
-            case "uwu": message.channel.send('OwO'); break;
+            case msg.includes("uwu"): message.channel.send('OwO'); break;
             case "owo": message.channel.send('UwU'); break;
             case "420": 
                 var x = Math.floor((Math.random() * 2) + 1);
