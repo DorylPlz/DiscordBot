@@ -44,7 +44,7 @@ bot.on('message', message =>{
     if(message.channel.id == "514929154555117608"){
         reacts.memealert(message);
     }
-    if (msg.includes("uwu") || msg.includes("owo") || msg.includes("420") || msg.includes("presion") || msg.includes("presión") || msg.includes("precion") || msg.includes("preción") || msg.includes("69") || msg.includes("tomas") || msg.includes("tomás")){
+    if (msg.includes("uwu") || msg.includes("owo") || msg.includes("420") || msg.includes("presion") || msg.includes("presión") || msg.includes("precion") || msg.includes("preción") || msg.includes("69")){
         reacts.reacts(msg, message);
     }
 
@@ -55,7 +55,7 @@ bot.on('message', message =>{
     }
 
 //Memes
-    if(message.content == "/comunista" || message.content == "/paty" || message.content == "/darpel" || message.content == "/mosh" || message.content == "/comunista" || message.content == "/clucho" || message.content == "/hernan"){
+    if(message.content == "/comunista" || message.content == "/paty" || message.content == "/darpel" || message.content == "/mosh" || message.content == "/comunista" || message.content == "/clucho" || message.content == "/hernan" || message.content == "tomas" || message.content == "tomás"){
         memes.list(message);
     }
 

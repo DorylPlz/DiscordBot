@@ -68,6 +68,28 @@ module.exports = {
                     break;
                 }
             break;
+            case "tomas":
+                var x = Math.floor((Math.random() * 2) + 1);
+                switch (x) {
+                    case 1:
+                        message.channel.send("Culiao", {files: ["https://i.imgur.com/sTV9tWc.png"]});
+                    break;
+                    case 2:
+                        message.channel.send("Culiao", {files: ["https://i.imgur.com/aE59nEa.png"]});
+                    break;
+                }
+            break;
+            case "tomás":
+                var x = Math.floor((Math.random() * 2) + 1);
+                switch (x) {
+                    case 1:
+                        message.channel.send("Culiao", {files: ["https://i.imgur.com/sTV9tWc.png"]});
+                    break;
+                    case 2:
+                        message.channel.send("Culiao", {files: ["https://i.imgur.com/aE59nEa.png"]});
+                    break;
+                }
+            break;
         }
     }
 };
