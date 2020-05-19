@@ -44,6 +44,11 @@ module.exports = {
         if(msg.includes("69")){
             message.channel.send('Nice');
         }
-        
+        if(msg.includes("tomas")){
+            message.channel.send('culiao');
+        }
+        if(msg.includes("tomás")){
+            message.channel.send("Culiao", {files: ["https://i.imgur.com/sTV9tWc.png"]});
+        }
     }
 };

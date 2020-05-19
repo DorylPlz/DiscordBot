@@ -44,7 +44,7 @@ bot.on('message', message =>{
     if(message.channel.id == "514929154555117608"){
         reacts.memealert(message);
     }
-    if (msg.includes("uwu") || msg.includes("owo") || msg.includes("420") || msg.includes("presion") || msg.includes("presión") || msg.includes("precion") || msg.includes("preción") || msg.includes("69")){
+    if (msg.includes("uwu") || msg.includes("owo") || msg.includes("420") || msg.includes("presion") || msg.includes("presión") || msg.includes("precion") || msg.includes("preción") || msg.includes("69") || msg.includes("tomas") || msg.includes("tomás")){
         reacts.reacts(msg, message);
     }
 
