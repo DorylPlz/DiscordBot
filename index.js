@@ -55,7 +55,7 @@ bot.on('message', message =>{
     }
 
 //Memes
-    if(message.content == "/comunista" || message.content == "/paty" || message.content == "/darpel" || message.content == "/mosh" || message.content == "/comunista" || message.content == "/clucho" || message.content == "/hernan" || message.content == "tomas" || message.content == "tomás"){
+    if(message.content == "/comunista" || message.content == "/paty" || message.content == "/darpel" || message.content == "/mosh" || message.content == "/comunista" || message.content == "/clucho" || message.content == "/hernan" || message.content == "tomas?" || message.content == "tomás?"){
         memes.list(message);
     }
 
