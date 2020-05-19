@@ -4,7 +4,7 @@ const bot = new Discord.Client();
 module.exports = {
     list: function(message){
         var msg = message.content.toLowerCase();
-        switch (msg.content){
+        switch (msg){
             case "/comunista": 
                 var x = Math.floor((Math.random() * 2) + 1);
                 switch (x) {
