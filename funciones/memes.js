@@ -76,7 +76,7 @@ module.exports = {
                         message.channel.send("Culiao", {files: ["https://i.imgur.com/sTV9tWc.png"]});
                     break;
                     case 2:
-                        message.channel.send("Culiao", {files: ["https://i.imgur.com/aE59nEa.png"]});
+                        message.channel.send("Culiao", {files: ["https://i.imgur.com/GAObyrc.png"]});
                     break;
                 }
             break;
@@ -87,7 +87,7 @@ module.exports = {
                         message.channel.send("Culiao", {files: ["https://i.imgur.com/sTV9tWc.png"]});
                     break;
                     case 2:
-                        message.channel.send("Culiao", {files: ["https://i.imgur.com/aE59nEa.png"]});
+                        message.channel.send("Culiao", {files: ["https://i.imgur.com/GAObyrc.png"]});
                     break;
                 }
             break;
