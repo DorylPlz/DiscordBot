@@ -70,7 +70,7 @@ module.exports = {
                 }
             break;
             case "tomas":
-                var x = Math.floor((Math.random() * 3) + 1);
+                var x = Math.floor((Math.random() * 4) + 1);
                 switch (x) {
                     case 1:
                         message.channel.send("Culiao", {files: ["https://i.imgur.com/sTV9tWc.png"]});
@@ -80,11 +80,14 @@ module.exports = {
                     break;
                     case 3:
                         message.channel.send("Culiao", {files: ["https://i.imgur.com/Ste8O5V.png"]});
+                    break;
+                    case 4:
+                        message.channel.send("Culiao", {files: ["https://i.imgur.com/ZoJZzT2.png"]});
                     break;
                 }
             break;
             case "tomás":
-                var x = Math.floor((Math.random() * 3) + 1);
+                var x = Math.floor((Math.random() * 4) + 1);
                 switch (x) {
                     case 1:
                         message.channel.send("Culiao", {files: ["https://i.imgur.com/sTV9tWc.png"]});
@@ -94,6 +97,9 @@ module.exports = {
                     break;
                     case 3:
                         message.channel.send("Culiao", {files: ["https://i.imgur.com/Ste8O5V.png"]});
+                    break;
+                    case 4:
+                        message.channel.send("Culiao", {files: ["https://i.imgur.com/ZoJZzT2.png"]});
                     break;
                 }
             break;
