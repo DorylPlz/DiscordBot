@@ -70,24 +70,30 @@ module.exports = {
                 }
             break;
             case "tomas":
-                var x = Math.floor((Math.random() * 2) + 1);
+                var x = Math.floor((Math.random() * 3) + 1);
                 switch (x) {
                     case 1:
                         message.channel.send("Culiao", {files: ["https://i.imgur.com/sTV9tWc.png"]});
                     break;
                     case 2:
                         message.channel.send("Culiao", {files: ["https://i.imgur.com/GAObyrc.png"]});
+                    break;
+                    case 3:
+                        message.channel.send("Culiao", {files: ["https://i.imgur.com/Ste8O5V.png"]});
                     break;
                 }
             break;
             case "tomás":
-                var x = Math.floor((Math.random() * 2) + 1);
+                var x = Math.floor((Math.random() * 3) + 1);
                 switch (x) {
                     case 1:
                         message.channel.send("Culiao", {files: ["https://i.imgur.com/sTV9tWc.png"]});
                     break;
                     case 2:
                         message.channel.send("Culiao", {files: ["https://i.imgur.com/GAObyrc.png"]});
+                    break;
+                    case 3:
+                        message.channel.send("Culiao", {files: ["https://i.imgur.com/Ste8O5V.png"]});
                     break;
                 }
             break;
