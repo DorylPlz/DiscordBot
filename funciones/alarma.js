@@ -21,7 +21,7 @@ var alarma = {
 
 function checkAlarmas(){
     var current_date = new Date();
-    current_date.setHours(current_date.getHours()-3, current_date.getMinutes());
+    current_date.setHours(current_date.getHours()-4, current_date.getMinutes());
     var current_sql = current_date.getFullYear()+"-"+current_date.getMonth()+"-"+current_date.getDate()+" "+current_date.getHours()+":"+current_date.getMinutes()+":00";
     
     let alarmas = "SELECT * FROM alarmas WHERE estado = 1 && fecha_alarma > '"+current_sql+"';";
@@ -126,7 +126,7 @@ module.exports = {
             var current_date = new Date();
             var alarma_date = new Date();
             
-            current_date.setHours(current_date.getHours()-3, current_date.getMinutes());
+            current_date.setHours(current_date.getHours()-4, current_date.getMinutes());
     
             var fecha_alarma = args[1];
             var hora_alarma = args[2];
