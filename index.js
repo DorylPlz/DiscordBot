@@ -10,6 +10,7 @@ const reacts = require("./funciones/reacts.js");
 const steam = require("./funciones/steamapi.js");
 const texto = require("./funciones/texto.js");
 const test = require("./funciones/test.js");
+const lenin = require("./funciones/lenin.js");
 
 const configApp = config.app;
 
@@ -40,11 +41,20 @@ bot.on('message', message =>{
             return;
         }
     };
+    if (message.author.id == "322570246303252481"){
+        var x = Math.floor((Math.random() * 100) );
+        var porcentaje = 27;
+        if(x < porcentaje){
+            lenin.culiao(message);
+        }else if(message.content == "umongus" || message.content == "among us" || message.content == "amongas" || message.content == "umungus"){
+            lenin.AmongUs(message);
+        }
+    };
 
     if(message.channel.id == "514929154555117608"){
         reacts.memealert(message);
     }
-    if (msg.includes("uwu") || msg.includes("owo") || msg.includes("420") || msg.includes("presion") || msg.includes("presión") || msg.includes("precion") || msg.includes("preción") || msg.includes("69")){
+    if (msg.includes("juego")||msg.includes("69")){
         reacts.reacts(msg, message);
     }
 
