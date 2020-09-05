@@ -43,8 +43,10 @@ bot.on('message', message =>{
     };
     if (message.author.id == "322570246303252481"){
         var x = Math.floor((Math.random() * 100) );
-        var porcentaje = 27;
-        if(x < porcentaje){
+        var porcentaje = 5;
+        if(x == 0){
+            lenin.reculiao(message);
+        }else if(x < porcentaje){
             lenin.culiao(message);
         }else if(message.content == "umongus" || message.content == "among us" || message.content == "amongas" || message.content == "umungus"){
             lenin.AmongUs(message);
