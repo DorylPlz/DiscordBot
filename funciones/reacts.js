@@ -12,7 +12,7 @@ module.exports = {
             message.channel.send('perdí');
         }
         if(msg.includes("69")){
-            message.react(':thinking:');
+            message.react('🤔');
         }
 
     }
