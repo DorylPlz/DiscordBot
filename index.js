@@ -44,11 +44,11 @@ bot.on('message', message =>{
     if (message.author.id == "322570246303252481"){
         var x = Math.floor((Math.random() * 100) );
         var porcentaje = 5;
-        if(x == 0){
+        if(x == 1){
             lenin.reculiao(message);
         }else if(x < porcentaje){
             lenin.culiao(message);
-        }else if(message.content == "umongus" || message.content == "among us" || message.content == "amongas" || message.content == "umungus"){
+        }else if(message.content == "umongus" || message.content == "among us" || message.content == "amongas" || message.content == "umungus" || message.content == "amongos" || message.content == "sus"){
             lenin.AmongUs(message);
         }
     };
@@ -56,7 +56,7 @@ bot.on('message', message =>{
     if(message.channel.id == "514929154555117608"){
         reacts.memealert(message);
     }
-    if (msg.includes("juego")||msg.includes("69")){
+    if (msg.includes(" 69 ")){
         reacts.reacts(msg, message);
     }
 
@@ -77,14 +77,6 @@ bot.on('message', message =>{
         if (msg == "."){
             steam.compare(steamKey, message);
         }
-    }
-    if(message.channel.id == "698363345668931606"){
-        
-        texto.unmigrated(message);
-    }
-    if(message.channel.id == "699124689074782269"){
-        
-        texto.checker(message);
     }
 })
 
