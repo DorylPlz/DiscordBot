@@ -44,7 +44,7 @@ bot.on('message', message =>{
     if (message.author.id == "322570246303252481"){
         var x = Math.floor((Math.random() * 100) );
         var porcentaje = 5;
-        if(x == 1){
+        if(x == 69){
             lenin.reculiao(message);
         }else if(x < porcentaje){
             lenin.culiao(message);
