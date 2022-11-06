@@ -4,7 +4,7 @@ const ytdl = require('ytdl-core');
 const https = require("http");
 const config = require("./config.json");
 const YT = require("./funciones/youtube.js");
-const al_func = require("./funciones/alarma.js");
+//const al_func = require("./funciones/alarma.js");
 const frases = require("./funciones/frases.js");
 const memes = require("./funciones/memes.js");
 const reacts = require("./funciones/reacts.js");
@@ -22,68 +22,75 @@ const PREFIX = process.env.PREFIX//configApp.prefix;
 
 bot.on('ready', () =>{
     console.log('Bot online');
-    al_func.checkAlarmas();
+    //al_func.checkAlarmas();
 })
 
 bot.on('message', message =>{
     
+    try{
+        var msg = message.content.toLowerCase();
 
-    var msg = message.content.toLowerCase();
-
-//reacts
-    if (message.author.bot){
-        if (message.author.id == "261302296103747584"){
-            if (msg.includes("Critical Fail!")){
-                reacts.roll1(message);
-            }else{
-                return;
-            }
-        }else{
-            return;
-        }
-    };
-    if (message.author.id == "322570246303252481"){
-        var x = Math.floor((Math.random() * 100) );
-        var porcentaje = 5;
-        if(x == 69){
-            lenin.reculiao(message);
-        }else if(x < porcentaje){
-            lenin.culiao(message);
-        }else if(message.content == "umongus" || message.content == "among us" || message.content == "amongas" || message.content == "umungus" || message.content == "amongos" || message.content == "sus"){
-            lenin.AmongUs(message);
-        }
-    };
-
-    if(message.channel.id == "514929154555117608"){
-        reacts.memealert(message);
-    }
-    if (msg.includes(" 69 ")){
-        reacts.reacts(msg, message);
-    }
-
-
-//YT
-    if (msg.includes("/wnplay")){
-        YT.setAlarmas(message);
-    }
-
-//alarma
-    if (msg.includes("/alarma")){
-        al_func.alarma(message);
-    }
-
-//Memes
-    if(message.content == "/comunista" || message.content == "/paty" || message.content == "/darpel" || message.content == "/mosh" || message.content == "/comunista" || message.content == "/clucho" || message.content == "/hernan" || message.content == "tomas" || message.content == "tomás"){
-        memes.list(message);
-    }
-
-//Steam test
-    if(message.channel.id == "675043690921852928"){
+        //reacts
+            if (message.author.bot){
+                if (message.author.id == "261302296103747584"){
+                    if (msg.includes("Critical Fail!")){
+                        reacts.roll1(message);
+                    }else{
+                        return;
+                    }
+                }else{
+                    return;
+                }
+            };
+            if (message.author.id == "322570246303252481"){
+                var x = Math.floor((Math.random() * 100) );
+                var porcentaje = 5;
+                if(x == 69){
+                    lenin.reculiao(message);
+                }else if(x < porcentaje){
+                    lenin.culiao(message);
+                }else if(message.content == "umongus" || message.content == "among us" || message.content == "amongas" || message.content == "umungus" || message.content == "amongos" || message.content == "sus"){
+                    lenin.AmongUs(message);
+                }
+            };
         
-        if (msg == "."){
-            steam.compare(steamKey, message);
-        }
+            if(message.channel.id == "514929154555117608"){
+                reacts.memealert(message);
+            }
+            if (msg.includes(" 69 ")){
+                reacts.reacts(msg, message);
+            }
+        
+        
+        //YT
+            if (msg.includes("/wnplay")){
+                YT.reproducirCancion(message);
+            }
+            if (msg.includes("/wnpara")){
+                YT.pararCancion(message);
+            }
+        
+        //alarma
+        /*     if (msg.includes("/alarma")){
+                al_func.alarma(message);
+            } */
+        
+        //Memes
+            if(message.content == "/comunista" || message.content == "/paty" || message.content == "/darpel" || message.content == "/mosh" || message.content == "/comunista" || message.content == "/clucho" || message.content == "/hernan" || message.content == "tomas" || message.content == "tomás"){
+                memes.list(message);
+            }
+        
+        //Steam test
+            if(message.channel.id == "675043690921852928"){
+                
+                if (msg == "."){
+                    steam.compare(steamKey, message);
+                }
+            }
+    }catch{
+        console.log('se murio');
     }
+    
 })
 
 bot.login(token);

@@ -2,25 +2,29 @@ const ytdl = require('ytdl-core');
 const config = require("../config.json");
 
 function reproducirCancion(message){
+     if(message != null){
+        if(message.member.voiceChannelID){
 
-    if(message != null){
-        if(message.guild.voiceConnection){
-            if(message.member.voiceChannel){
+            const url = message.content.split(" ")[1];
+            if(url != null && url != ''){ 
                 message.member.voiceChannel.join().then(function(connection){
-            
-                    var url = message;
                     connection.playStream(ytdl(url, {filter: "audioonly"}));
-        
-            })
+                })
             }else{
-                console.log("No está conectado el usuario");
+                message.reply('Oye wn, indica una url');
             }
+            
         }else{
-            console.log("No está conectado el usuario");
-        }
+            console.log("Voiceconnection");
+        } 
+
     }else{
         console.log("Indique una URL");
-    }
+    } 
+
                
 }
-module.exports = { reproducirCancion }
+function pararCancion(message){
+    message.guild.me.voiceChannel.leave();
+}
+module.exports = { reproducirCancion, pararCancion }
