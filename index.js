@@ -3,6 +3,7 @@ const bot = new Discord.Client();
 const ytdl = require('ytdl-core');
 const https = require("http");
 const config = require("./config.json");
+const YT = require("./funciones/youtube.js");
 const al_func = require("./funciones/alarma.js");
 const frases = require("./funciones/frases.js");
 const memes = require("./funciones/memes.js");
@@ -60,6 +61,11 @@ bot.on('message', message =>{
         reacts.reacts(msg, message);
     }
 
+
+//YT
+    if (msg.includes("/wnplay")){
+        YT.setAlarmas(message);
+    }
 
 //alarma
     if (msg.includes("/alarma")){
