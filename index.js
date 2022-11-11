@@ -87,8 +87,8 @@ bot.on('message', message =>{
                     steam.compare(steamKey, message);
                 }
             }
-    }catch{
-        console.log('se murio');
+    }catch (error){
+        console.log(error);
     }
     
 })
